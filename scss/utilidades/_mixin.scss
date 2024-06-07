@@ -1,0 +1,21 @@
+
+@mixin fuente-responsiva($size-desktop, $size-mobile) {
+    font-size: $size-desktop;
+    @media (max-width: 600px) {
+      font-size: $size-mobile;
+    }
+  }
+  
+  @mixin margen-responsivo($margin-desktop, $margin-mobile, $property: margin) {
+    #{$property}: $margin-desktop;
+    @media (max-width: 600px) {
+      #{$property}: $margin-mobile;
+    }
+  }
+  
+  @mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

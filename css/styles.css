@@ -1,14 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Gorditas:wght@400;700&family=Indie+Flower&display=swap");
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e0f7fa;
+  font-family: Indie Flower;
+  background-color: #e9f4f6;
 }
 
+header .blue-bg {
+  background-color: rgb(111, 169, 228);
+}
 header .navbar-brand {
   font-size: 25px;
   font-weight: bold;
 }
 header .navbar-nav .nav-item .nav-link {
   padding: 8px 15px;
+}
+header .fuente-nav {
+  font-family: Gorditas;
 }
 @media (min-width: 992px) {
   header .navbar-collapse {
@@ -17,6 +24,29 @@ header .navbar-nav .nav-item .nav-link {
   }
   header .navbar-toggler {
     display: none;
+  }
+}
+
+.titulo-principal {
+  text-align: center;
+  font-family: Gorditas;
+  font-size: 500%;
+  margin: 30px;
+  margin-bottom: 70px;
+}
+@media (max-width: 600px) {
+  .titulo-principal {
+    font-size: 250%;
+  }
+}
+@media (max-width: 600px) {
+  .titulo-principal {
+    margin: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .titulo-principal {
+    margin-bottom: 50px;
   }
 }
 
@@ -29,14 +59,14 @@ header .navbar-nav .nav-item .nav-link {
 }
 .novedades p {
   text-align: left;
-  font-family: "sevillana", cursive;
+  font-family: Indie Flower;
   margin: 6px 0px 30px 10px;
   font-size: 16px;
 }
 
 .productos-p, .productos-desc {
   text-align: left;
-  font-family: "sevillana", cursive;
+  font-family: Indie Flower;
   margin: 6px 0px 30px 10px;
   font-size: 16px;
 }
@@ -92,12 +122,13 @@ header .navbar-nav .nav-item .nav-link {
 
 footer {
   text-align: center;
-  background-color: #343a40;
+  background-color: rgb(111, 169, 228);
   color: #ffffff;
   padding: 10px 0;
 }
 
-.titulos-h2 {
+.titulos {
+  font-size: 200%;
   margin: 10px 0px 50px 10px;
 }
 
@@ -172,7 +203,7 @@ footer {
   margin-left: 15px;
   display: inline-block;
   text-decoration: none;
-  font-family: "sevillana", cursive;
+  font-family: Gorditas;
   color: black;
 }
 
@@ -225,10 +256,6 @@ footer {
   background-color: #0056b3;
 }
 
-.nosotros-h2 {
-  margin: 10px 0px 50px 10px;
-}
-
 .container-nosotros {
   max-width: 960px;
   margin: 0 auto;
@@ -251,6 +278,8 @@ footer {
 .nosotros {
   margin-top: 20px;
   padding: 20px;
+  font-family: Indie Flower;
+  font-size: large;
 }
 
 .img-nos {

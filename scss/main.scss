@@ -1,12 +1,17 @@
-
-@import "utilidades/variables.scss";
+@import "utilidades/_variables.scss";
+@import "utilidades/_mixin.scss";
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Gorditas:wght@400;700&family=Indie+Flower&display=swap');
 
 body {
-  font-family: $fuente-primaria;
+  font-family: $fuente-secu;
   background-color: $color-fondo;
 }
 
 header {
+  .blue-bg {
+    background-color: $color-footernav;
+  }
+
   .navbar-brand {
     font-size: 25px;
     font-weight: bold;
@@ -19,15 +24,26 @@ header {
       }
     }
   }
+  .fuente-nav {
+    font-family: $fuente-prim;
+  }
   @media (min-width: 992px) {
     .navbar-collapse {
-        display: flex !important;
-        justify-content: flex-end;
+      display: flex !important;
+      justify-content: flex-end;
     }
     .navbar-toggler {
-        display: none;
+      display: none;
     }
+  }
 }
+
+.titulo-principal {
+  text-align: center;
+  font-family: $fuente-prim;
+  @include fuente-responsiva(500%, 250%);
+  @include margen-responsivo(30px, 20px);
+  @include margen-responsivo(70px, 50px, margin-bottom);
 }
 
 .novedades {
@@ -40,7 +56,7 @@ header {
 
   p {
     text-align: left;
-    font-family: $fuente-secundaria;
+    font-family: $fuente-secu;
     margin: 6px 0px 30px 10px;
     font-size: $tamaño-fuente;
   }
@@ -48,17 +64,19 @@ header {
 
 .productos-p, .productos-desc {
   text-align: left;
-  font-family: $fuente-secundaria;
+  font-family: $fuente-secu;
   margin: 6px 0px 30px 10px;
   font-size: $tamaño-fuente;
 }
-.ref-prom-prod{
-  cursor: pointer; 
+
+.ref-prom-prod {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
+
 .img-novedad {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 
   img {
     width: 100%;
@@ -105,69 +123,72 @@ header {
 
 footer {
   text-align: center;
-  background-color: $color-fondo-secundario;
+  background-color: $color-footernav;
   color: $color-texto;
   padding: 10px 0;
 }
 
-.titulos-h2 {
+.titulos {
+  font-size: 200%;
   margin: 10px 0px 50px 10px;
 }
 
 .producto-grilla {
-    padding: 70px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+  padding: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .producto {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform $transicion;
-    margin: 0 auto; 
-    img {
-        width: 100%;
-        height: auto;
-    }
-    p {
-        margin-top: 0.5rem;
-        text-align: center;
-        color: black;
-    }
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform $transicion;
+  margin: 0 auto;
 
-    button {
-        display: block;
-        width: 100%;
-        padding: 8px;
-        background-color: $color-primario;
-        color: $color-texto;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color $transicion;
+  img {
+    width: 100%;
+    height: auto;
+  }
 
-        &:hover {
-            background-color: $color-primario-hover;
-        }
-    }
+  p {
+    margin-top: 0.5rem;
+    text-align: center;
+    color: black;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: $color-primario;
+    color: $color-texto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color $transicion;
 
     &:hover {
-        transform: scale(1.05);
+      background-color: $color-primario-hover;
     }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
-
 @media only screen and (max-width: 600px) {
-    .producto {
-        width: 100%;
-        height: auto;
-        p {
-            margin-top: 0.5rem;
-            text-align: center;
-        }
+  .producto {
+    width: 100%;
+    height: auto;
+
+    p {
+      margin-top: 0.5rem;
+      text-align: center;
     }
+  }
 }
 
 .seguinos-pro {
@@ -190,7 +211,7 @@ footer {
   margin-left: 15px;
   display: inline-block;
   text-decoration: none;
-  font-family: $fuente-secundaria;
+  font-family: $fuente-prim;
   color: black;
 }
 
@@ -218,7 +239,7 @@ footer {
     margin-bottom: 5px;
   }
 
-  input[type="text"],input[type="email"],textarea {
+  input[type="text"], input[type="email"], textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid $color-borde;
@@ -247,10 +268,6 @@ footer {
   }
 }
 
-.nosotros-h2 {
-  margin: 10px 0px 50px 10px;
-}
-
 .container-nosotros {
   max-width: 960px;
   margin: 0 auto;
@@ -274,6 +291,8 @@ footer {
 .nosotros {
   margin-top: 20px;
   padding: 20px;
+  font-family: $fuente-secu;
+  font-size: large;
 }
 
 .img-nos {
@@ -333,3 +352,6 @@ footer {
     }
   }
 }
+
+
+
